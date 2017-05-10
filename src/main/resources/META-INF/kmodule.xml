@@ -1,0 +1,12 @@
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="sepKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="*">
+    <ksession name="sepKieSession" type="stateful" default="true" clockType="realtime" scope="javax.enterprise.context.ApplicationScoped">
+      <workItemHandlers>
+        <workItemHandler type="com.its.sep.processes.installationprocess.handlers.UpdateDevicesSimsStatusInventoryHandler" name="UpdateDSSI"/>
+        <workItemHandler type="com.its.sep.processes.installationprocess.handlers.RecordSimsDevicesInInventoryHandler" name="RecordSDI"/>
+        <workItemHandler type="com.its.sep.processes.installationprocess.handlers.UploadDeliveryNotesInArchiveSystemHandler" name="UploadDNAS"/>
+        <workItemHandler type="com.its.sep.processes.installationprocess.handlers.SendServiceActivationRequestToFMSHandler" name="SendRFMS"/>
+      </workItemHandlers>
+    </ksession>
+  </kbase>
+</kmodule>

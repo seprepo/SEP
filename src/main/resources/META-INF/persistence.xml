@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:orm="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+    <persistence-unit name="com.intime.sep:installation-process:1.0" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>java:jboss/datasources/LocalPostgresSqlDb</jta-data-source>
+        <class>com.its.sep.processes.installationprocess.entities.SimCard</class>
+        <class>com.its.sep.processes.installationprocess.entities.WareHouse</class>
+        <class>com.its.sep.processes.installationprocess.entities.Assignement</class>
+        <class>com.its.sep.processes.installationprocess.entities.Assets</class>
+        <class>com.its.sep.processes.installationprocess.entities.CustomerAppointment</class>
+        <class>com.its.sep.processes.installationprocess.entities.OrderLines</class>
+        <class>com.its.sep.processes.installationprocess.entities.Device</class>
+        <class>com.its.sep.processes.installationprocess.entities.JobOrderPackage</class>
+        <class>com.its.sep.processes.installationprocess.entities.Product</class>
+        <class>com.its.sep.processes.installationprocess.entities.Customer</class>
+        <class>com.its.sep.processes.installationprocess.entities.Technician</class>
+        <class>com.its.sep.processes.installationprocess.entities.PurshaseOrder</class>
+        <class>com.its.sep.processes.installationprocess.entities.JobOrder</class>
+        <class>com.its.sep.processes.installationprocess.entities.InstallationReport</class>
+        <class>com.its.sep.processes.installationprocess.entities.WorkOrderPackage</class>
+        <class>com.its.sep.processes.installationprocess.entities.DeliveryNotes</class>
+        <class>com.its.sep.processes.installationprocess.entities.ProductQuantity</class>
+        <class>com.its.sep.processes.installationprocess.entities.JobOrderElement</class>
+        <class>com.its.sep.processes.installationprocess.entities.TeamJobOrder</class>
+        <class>com.its.sep.processes.installationprocess.entities.TechnicianJobOrder</class>
+        <class>com.its.sep.processes.installationprocess.entities.InstallationAsset</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.max_fetch_depth" value="3"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.id.new_generator_mappings" value="false"/>
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+        </properties>
+    </persistence-unit>
+</persistence>
